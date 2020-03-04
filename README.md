@@ -11,7 +11,7 @@ One of the attractive characteristics of deep neural networks is their ability t
 # Dependences 
 - Python2.7, NumPy, SciPy, NVIDIA GPU
 - **Tensorflow/Pytorch:** the version of tensorflow should be more 1.0(https://www.tensorflow.org/), pytorch is more 0.4
-- **Dataset:** CelebA, HHFQ, Imagenet, Places365 or your dataset 
+- **Dataset:** MNIST, CelebA, HHFQ, Imagenet, Places365 or your dataset 
 
 # Installation 
 - Install tensorflow/pytorch
