@@ -21,7 +21,7 @@ Coming soon
 
 
 # References 
-- \[1\] 'MineGAN: effective knowledge transfer from  GANs to target domains with few images' by Andrew Brock et. al, (https://arxiv.org/abs/1809.11096)[paper], (https://github.com/ajbrock/BigGAN-PyTorch)[code] 
+- \[1\] 'Large Scale GAN Training for High Fidelity Natural Image Synthesis' by Andrew Brock et. al, (https://arxiv.org/abs/1809.11096)[paper], (https://github.com/ajbrock/BigGAN-PyTorch)[code] 
 - \[2\] 'Progressive Growing of GANs for Improved Quality, Stability, and Variation' by Martin Heusel  et. al, (https://arxiv.org/abs/1710.10196)[paper], (https://github.com/tkarras/progressive_growing_of_gans)[code] 
 # Contact
 
