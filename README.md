@@ -10,41 +10,20 @@ One of the attractive characteristics of deep neural networks is their ability t
 - [Contact](#contact)
 # Dependences 
 - Python2.7, NumPy, SciPy, NVIDIA GPU
-- **Tensorflow:** the version should be more 1.0(https://www.tensorflow.org/)
-- **Dataset:** lsun-bedroom(http://lsun.cs.princeton.edu/2017/) or your dataset 
+- **Tensorflow/Pytorch:** the version of tensorflow should be more 1.0(https://www.tensorflow.org/), pytorch is more 0.4
+- **Dataset:** CelebA, HHFQ, Imagenet, Places365 or your dataset 
 
 # Installation 
-- Install tensorflow
-- Opencv 
+- Install tensorflow/pytorch
 # Instructions
-- Using 'git clone https://github.com/yaxingwang/Transferring-GANs'
 
-    You will get new folder whose name is 'Transferring-GANs' in your current path, then  use 'cd Transferring-GANs' to enter the downloaded new folder
-    
-- Download pretrain models[Google driver](https://drive.google.com/file/d/1e7Pw-m-DgAiB_aQnNUUwBRVFc2izRiRw/view?usp=sharing); [Tencent qcloud](https://share.weiyun.com/5mBsISh)
-
-    Uncompressing downloaded folder to current folder, then you have new folder 'transfer_model'  which contains two folders: 'conditional', 'unconditional', each of which has four folders: 'imagenet', 'places', 'celebA', 'bedroom'
-
-- Download dataset or use your dataset.
-
-    I have shown one example and you could make it with same same form.
-
-- Run 'python transfer_gan.py'
-
-   Runing code with default setting. The pretrained model can be seleted by changing the parameter 'TARGET_DOMAIN'
- 
-- Conditional GAN 
-  If you are interested in using conditional model, just setting parameter 'ACGAN = True'
-# Results 
-Using pretrained models not only get high performance, but fastly attach convergence. In following figure, we show conditional and unconditional settings.
-<br>
-<p align="center"><img width="100%" height='60%'src="results/FID.png" /></p>
-
+Coming soon
 
 
 # References 
-- \[1\] 'Improved Training of Wasserstein GANs' by Ishaan Gulrajani et. al, https://arxiv.org/abs/1704.00028, (https://github.com/igul222/improved_wgan_training)[code] 
-- \[2\] 'GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium' by Martin Heusel  et. al, https://arxiv.org/abs/1704.00028
+- \[1\] 'MineGAN: effective knowledge transfer from  GANs to target domains with few images' by Andrew Brock et. al, (https://arxiv.org/abs/1809.11096)[paper], (https://github.com/ajbrock/BigGAN-PyTorch)[code] 
+- \[2\] 'Progressive Growing of GANs for Improved Quality, Stability, and Variation' by Martin Heusel  et. al, (https://arxiv.org/abs/1710.10196)[paper], (https://github.com/tkarras/progressive_growing_of_gans)[code] 
 # Contact
+
 
 If you run into any problems with this code, please submit a bug report on the Github site of the project. For another inquries pleace contact with me: yaxing@cvc.uab.es
