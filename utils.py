@@ -613,7 +613,8 @@ def prepare_root(config):
   for key in ['weights_root', 'logs_root', 'samples_root']:
     if not os.path.exists(config[key]):
       print('Making directory %s for %s...' % (config[key], key))
-      os.mkdir(config[key])
+      #os.mkdir(config[key])
+      os.makedirs(config[key])
 
 
 # Simple wrapper that applies EMA to a model. COuld be better done in 1.0 using
@@ -723,8 +724,8 @@ def save_weights(G, D, M, state_dict, weights_root, experiment_name,
 # Load a model's weights, optimizer, and the state_dict
 def load_weights(G, D, M, state_dict, weights_root, experiment_name, 
                  name_suffix=None, G_ema=None, strict=True, load_optim=True):
- # root = '/'.join([weights_root, experiment_name])
-  root = '/home/fk1/fahad/138k'
+  #root = '/'.join([weights_root, experiment_name])
+  root = '/data/users/yaxing/MineGAN_I2I/BigGAN'
   if name_suffix:
     print('Loading %s weights from %s...' % (name_suffix, root))
   else:

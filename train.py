@@ -187,7 +187,11 @@ def run(config):
         x, y = x.to(device).half(), y.to(device)
       else:
         x, y = x.to(device), y.to(device)
-      metrics = train(x, y)
+      if state_dict['itr'] < (138000 + 1000): # 138000 is the last iteration of the BigGAN  
+          stage = 1
+      else:
+          stage = 2
+      metrics = train(x, y, stage)
       train_log.log(itr=int(state_dict['itr']), **metrics)
       
       # Every sv_log_interval, log singular values

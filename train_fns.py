@@ -19,7 +19,7 @@ def dummy_training_function():
 
 
 def GAN_training_function(G, D, M, GD, z_, y_, ema, state_dict, config):# yaxing
-  def train(x, y):
+  def train(x, y, stage):
     G.optim.zero_grad()
     D.optim.zero_grad()
     M.optim.zero_grad()# yaxing # How many chunks to split x and y into?
@@ -62,7 +62,10 @@ def GAN_training_function(G, D, M, GD, z_, y_, ema, state_dict, config):# yaxing
     # Optionally toggle "requires_grad"
     if config['toggle_grads']:
       utils.toggle_grad(D, False)
-      utils.toggle_grad(G, False)# yaxing
+      if stage==1:
+          utils.toggle_grad(G, False)# yaxing
+      else:
+          utils.toggle_grad(G, True)# yaxing
       utils.toggle_grad(M, True) # yaxing
       
     # Zero G's gradients by default before training G, for safety
@@ -88,7 +91,8 @@ def GAN_training_function(G, D, M, GD, z_, y_, ema, state_dict, config):# yaxing
       # Don't ortho reg shared, it makes no sense. Really we should blacklist any embeddings for this
       utils.ortho(G, config['G_ortho'], 
                   blacklist=[param for param in G.shared.parameters()])
-    #G.optim.step()
+    if stage==2:
+        G.optim.step()
     M.optim.step()
     
     # If we have an ema, update it, regardless of if we test with it or not
