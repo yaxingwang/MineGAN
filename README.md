@@ -17,7 +17,11 @@ One of the attractive characteristics of deep neural networks is their ability t
 - Install tensorflow/pytorch
 # Instructions
 
-Coming soon
+- Pretrained model: downloading the pretrained model from Biggan, and put it into 'data/your_data/weights'. Note using 'G_ema.pth' to replace 'G.pth', since we dones't use 'ema'
+
+- Preparing data: leveraging 'sh scripts/utils/prepare_data.py', and put it into 'data/your_data/data'. Please check BigGAN to learn how to generate the data 
+
+- Traing: sh scripts/launch_BigGAN_bs256x8.sh 
 
 
 # References 

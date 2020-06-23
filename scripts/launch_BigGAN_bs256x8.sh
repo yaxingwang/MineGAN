@@ -14,7 +14,7 @@ python train.py \
 --G_ch 96 --D_ch 96 \
 --test_every 2000000 --save_every 100 --num_best_copies 5 --num_save_copies 2 --seed 0 \
 --use_multiepoch_sampler \
---base_root /data/users/yaxing/MineGAN/places365/arch \
+--base_root data/arch \
 --experiment_name  arch \
 #--data_root  /data/datasets/Yaxing/MineGAN/places365/arch
 #--ema --use_ema --ema_start 20000 \
