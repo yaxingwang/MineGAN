@@ -17,16 +17,20 @@ One of the attractive characteristics of deep neural networks is their ability t
 - Install tensorflow/pytorch
 # Instructions
 
-- Pretrained model: downloading the pretrained model from Biggan, and put it into 'data/your_data/weights'. Note using 'G_ema.pth' to replace 'G.pth', since we dones't use 'ema'
+- `git clone git@github.com:yaxingwang/MineGAN.git` to get `MineGA`
 
-- Preparing data: leveraging 'sh scripts/utils/prepare_data.py', and put it into 'data/your_data/data'. Please check BigGAN to learn how to generate the data 
+- Pretrained model: downloading the pretrained model from [Biggan](https://github.com/ajbrock/BigGAN-PyTorch), and put it into `data/your_data/weights`. Note using `G_ema.pth` to replace `G.pth`, since we dones't use `ema`. The pretrained model is moved into `MineGA/weights/biggan` 
 
-- Traing: sh scripts/launch_BigGAN_bs256x8.sh 
+- Downloading [inception model](https://drive.google.com/file/d/1A5C1jYieAcu_CDml0mhrLGqCCBF4uujG/view?usp=sharing) and moving it into `MineGA` 
+
+- Preparing data: leveraging  `sh scripts/utils/prepare_data.py`, and put it into `data/your_data/data`. Please check [Biggan](https://github.com/ajbrock/BigGAN-PyTorch) to learn how to generate the data 
+
+- Traing: ```sh scripts/launch_BigGAN_bs256x8.sh```
 
 
 # References 
-- \[1\] 'Large Scale GAN Training for High Fidelity Natural Image Synthesis' by Andrew Brock et. al, (https://arxiv.org/abs/1809.11096)[paper], (https://github.com/ajbrock/BigGAN-PyTorch)[code] 
-- \[2\] 'Progressive Growing of GANs for Improved Quality, Stability, and Variation' by Martin Heusel  et. al, (https://arxiv.org/abs/1710.10196)[paper], (https://github.com/tkarras/progressive_growing_of_gans)[code] 
+- \[1\] [BigGAN](https://arxiv.org/abs/1809.11096) 
+- \[2\] [PGAN](https://arxiv.org/abs/1710.10196) 
 # Contact
 
 
