@@ -187,7 +187,7 @@ def run(config):
         x, y = x.to(device).half(), y.to(device)
       else:
         x, y = x.to(device), y.to(device)
-      if state_dict['itr'] < (138000 + 1000): # 138000 is the last iteration of the BigGAN  
+      if state_dict['itr'] < (138000 + 300): # 138000 is the last iteration of the BigGAN  
           stage = 1
       else:
           stage = 2
