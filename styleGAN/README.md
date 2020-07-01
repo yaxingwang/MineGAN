@@ -1,4 +1,4 @@
-# Freeze D for StyleGAN
+# MineGAN for StyleGAN
 
 ## Getting started
 
@@ -27,4 +27,25 @@ python precompute_acts.py --dataset DATASET
 ### Run experiments
 ```
 CUDA_VISIBLE_DEVICES=0 python finetune.py --name DATASET_finetune --mixing --loss r1 --sched --dataset DATASET
+```
+
+If you use the provided data and code, please cite the following papers:
+ 
+```
+@inproceedings{
+    mo2020freeze,
+    title={Freeze the Discriminator: a Simple Baseline for Fine-Tuning GANs},
+    author={Mo, Sangwoo and Cho, Minsu and Shin, Jinwoo},
+    booktitle = {CVPR AI for Content Creation Workshop},
+    year={2020},
+}
+
+@InProceedings{Wang_2020_CVPR,
+author = {Wang, Yaxing and Gonzalez-Garcia, Abel and Berga, David and Herranz, Luis and Khan, Fahad Shahbaz and Weijer, Joost van de},
+title = {MineGAN: Effective Knowledge Transfer From GANs to Target Domains With Few Images},
+booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
+} 
+
 ```
