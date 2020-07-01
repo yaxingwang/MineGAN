@@ -1,6 +1,8 @@
 # MineGAN for StyleGAN
 
-## Getting started
+### Dependences 
+- Python3.7, NumPy, SciPy, NVIDIA GPU
+- **Pytorch:**  Pytorch is more 1.2 (pytorch14 doesn't work)
 
 ### Download datasets
 ```
