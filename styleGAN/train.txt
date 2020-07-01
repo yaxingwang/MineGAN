@@ -59,4 +59,8 @@ CUDA_VISIBLE_DEVICES=3 python finetune.py --name DATASET_finetune --mixing --los
 CUDA_VISIBLE_DEVICES=3 python finetune.py --name DATASET_finetune --mixing --loss r1 --sched --dataset WolfHead --save_path /data/users/yaxing/FreezeD/BearHead/stylegan_MineGAN_noise_semantic/WolfHead/noisemlp2_semanticmlp4_stage1_100ite_batch_4 --miner --stage1 100 --batch_size 4 --eval_step 20
 
 
+CUDA_VISIBLE_DEVICES=3 python finetune.py --name DATASET_finetune --mixing --loss r1 --sched --dataset TigerHead --save_path result --miner 
+
+
+
 
