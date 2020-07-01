@@ -26,7 +26,7 @@ python precompute_acts.py --dataset DATASET
 
 ### Run experiments
 ```
-CUDA_VISIBLE_DEVICES=0 python finetune.py --name DATASET_finetune --mixing --loss r1 --sched --dataset DATASET
+CUDA_VISIBLE_DEVICES=0 python finetune.py --name DATASET_finetune --mixing --miner --loss r1 --sched --dataset DATASET --save_path result/DATASET  
 ```
 
 If you use the provided data and code, please cite the following papers:
