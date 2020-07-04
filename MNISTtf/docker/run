@@ -1,0 +1,17 @@
+#!/bin/bash
+
+PROJECT_ROOT="$(cd "$(dirname "$0")"; cd ..; pwd)"
+NAME="mnist_unconditional"
+REPO_ROOT="/root/${NAME}"
+
+xhost +local:${NAME}
+sudo nvidia-docker run -it \
+  --name ${NAME} \
+  -h ${NAME} \
+  --volume ${PROJECT_ROOT}:${REPO_ROOT} \
+  --volume /tmp/.X11-unix:/tmp/.X11-unix \
+  -e DISPLAY=$DISPLAY \
+  --rm \
+  ${NAME} "$@"
+xhost -local:${NAME}
+

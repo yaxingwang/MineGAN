@@ -1,0 +1,14 @@
+# Con este fichero lanzamos un trabajo que nos permite ver que valor contendrá en el entorno
+# CUDA_VISIBLE_DEVICES al solicitar la cantidad de gráficas que queramos.
+
+#sbatch --gres gpu:Pascal:1 --mem 10000 -t 20-00:00 -D /home/yaxing/CycleAdapt ~/CycleAdapt/cycleadapt.sh
+#sbatch --gres=gpu:1 --mem 10000 -t 20-00:00 -D /home/yaxing/CycleAdapt ~/CycleAdapt/cycleadapt.sh
+sbatch --gres gpu:Pascal:1 --mem 35000 -t 20-00:00 -D /home/yaxing/NIPS2019_MNIST/off_manifold ~/NIPS2019_MNIST/off_manifold/pretrain_gan.sh
+
+
+
+
+
+
+
+
