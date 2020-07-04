@@ -2,8 +2,8 @@
 # Installation
 Install and run your docker by running (requires nvidia-docker)
 ```
-sudo sh docker/build'
-sudo sh docker/run
+sudo docker/build'
+sudo docker/run
 ```
 # Run
 Go to your on/off_manifold folder and run each training step of your experiments:
