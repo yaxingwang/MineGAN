@@ -15,3 +15,6 @@ python gan_mnist_knowledge_distillation_adaptor_step3.py $bias_digit $noise_len 
 python gan_mnist_knowledge_distillation_adaptor_step4.py $bias_digit $noise_len $gpu
 ```
 See some examples in test_noiselen, test_portions and test_unbias scripts.
+
+# Contact
+If you run into any problems with this code, please submit a bug report on the Github site of the project. For another inquries pleace contact with me: dberga@cvc.uab.es
