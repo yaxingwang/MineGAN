@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PROJECT_ROOT="$(cd "$(dirname "$0")"; cd ..; pwd)"
+NAME="mnist_unconditional"
+echo "Building Docker image..."
+
+sudo docker build -t $NAME . -f Dockerfile
+
