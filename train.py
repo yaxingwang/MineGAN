@@ -210,18 +210,20 @@ def run(config):
         if config['G_eval_mode']:
           print('Switchin G to eval mode...')
           G.eval()
+          M.eval()
           if config['ema']:
             G_ema.eval()
         train_fns.save_and_sample(G, D,M, G_ema, z_, y_, fixed_z, fixed_y, 
                                   state_dict, config, experiment_name)
 
       # Test every specified interval
-     # if not (state_dict['itr'] % config['test_every']):
-     #   if config['G_eval_mode']:
-     #     print('Switchin G to eval mode...')
-     #     G.eval()
-     #   train_fns.test(G, D, G_ema, z_, y_, state_dict, config, sample,
-     #                  get_inception_metrics, experiment_name, test_log)
+      if not (state_dict['itr'] % config['test_every']):
+        if config['G_eval_mode']:
+          print('Switchin G to eval mode...')
+          G.eval()
+          M.eval()
+        train_fns.test(G, D, G_ema, z_, y_, state_dict, config, sample,
+                       get_inception_metrics, experiment_name, test_log)
     state_dict['epoch'] += 1
 
 
