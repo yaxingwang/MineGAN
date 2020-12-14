@@ -890,7 +890,7 @@ def sample(G, M, z_, y_, config):
     if config['parallel']:
       #z_from_M, y_from_M = M(z_)
       z_from_M, y_from_M =  nn.parallel.data_parallel(M, (z_,))
-      G_z =  nn.parallel.data_parallel(G, (z_from_M, G.shared(y_)))
+      G_z =  nn.parallel.data_parallel(G, (z_from_M, y_from_M))
       #G_z =  nn.parallel.data_parallel(G, (z_, G.shared(y_)))
     else:
       # yaxing
