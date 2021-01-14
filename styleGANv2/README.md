@@ -16,9 +16,7 @@ python prepare_data.py  data/CatHead --out data/CatHead_lmdb --size 256
 ```
 
 ### Download pre-traind GAN models
-```
 This pretrained model is  [unoffical StyleGANv2 one](https://drive.google.com/file/d/1PQutd-JboOCOZqmd95XWxWrO8gGEvRcO/view), please cite this [repository](https://github.com/rosinality/stylegan2-pytorch) if you use the pretrained model. Given the downloaded pretrained model, we can creat new folder(e.g. 'model'), and move the downloaded model into this folder. 
-```
 
 
 ### Run experiments
