@@ -2,7 +2,7 @@
 # Installation
 Install and run your docker by running (requires nvidia-docker)
 ```
-sudo docker/build'
+sudo docker/build
 sudo docker/run
 ```
 # Run
