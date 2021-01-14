@@ -7,11 +7,11 @@ Training for MineGAN on [StyleGANv2](https://github.com/yaxingwang/MineGAN/tree/
 
 ------------------------------------------------------------
 
-Training for MineGAN on [mnist](https://github.com/yaxingwang/MineGAN/tree/master/MNISTtf)
+Training for MineGAN on [StyleGAN](https://github.com/yaxingwang/MineGAN/tree/master/styleGAN)
 
 ------------------------------------------------------------
 
-Using pre-trained StyleGAN, thanks sangwoomo's [code](https://github.com/sangwoomo/FreezeD). I add the training for MineGAN, please check [MineGAN on StyleGAN](https://github.com/yaxingwang/MineGAN/tree/master/styleGAN)
+Training for MineGAN on [mnist](https://github.com/yaxingwang/MineGAN/tree/master/MNISTtf)
 
 ------------------------------------------------------------
 
